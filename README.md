@@ -64,7 +64,9 @@ All analysis runs locally in [`src/audio/compare.js`](src/audio/compare.js). It 
 
 ## Privacy
 
-Recordings are kept in memory in the current tab only. Nothing is uploaded or stored, and the audio URLs are freed when clips are replaced. No analytics, no backend.
+Recordings are kept in memory in the current tab only. Nothing is uploaded or stored, and the audio URLs are freed when clips are replaced. There is no backend.
+
+**Visitor analytics:** production builds include [Vercel Web Analytics](https://vercel.com/docs/analytics) (`@vercel/analytics`) to count page views and unique visitors. It uses no cookies, and Vercel counts unique visitors from a hash of the request that rotates daily. It never sees recordings, song titles or scores. It's not loaded in `npm run dev`, and it only collects data when the site is deployed on Vercel with Web Analytics turned on in the project settings.
 
 ## Project structure
 
